@@ -1,0 +1,13 @@
+{
+  "files": {
+    "main.css": "/Ping/static/css/main.2d32db07.css",
+    "main.js": "/Ping/static/js/main.58756699.js",
+    "index.html": "/Ping/index.html",
+    "main.2d32db07.css.map": "/Ping/static/css/main.2d32db07.css.map",
+    "main.58756699.js.map": "/Ping/static/js/main.58756699.js.map"
+  },
+  "entrypoints": [
+    "static/css/main.2d32db07.css",
+    "static/js/main.58756699.js"
+  ]
+}
