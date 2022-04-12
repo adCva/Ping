@@ -1,14 +1,18 @@
 import './App.css';
 import styled from "styled-components";
 import { useState } from "react";
+// ================== React Icons.
 import { FaFacebookF, FaTwitter } from "react-icons/fa";
 import { GrInstagram } from "react-icons/gr";
 
 
 function App() {
+  // ================== State.
   const [ email, setEmail ] = useState("");
   const [ error, setError ] = useState(false);
 
+
+  // ================== Notify me click.
   const applyNotify = () => {
     if (email.length === 0) {
       setError(true);
@@ -21,9 +25,13 @@ function App() {
     }
   }
 
+
+  // ================== Handle input change.
   const handleChange = (e) => {
     setEmail(e.target.value);
   }
+
+
 
   return (
     <div className="App">
@@ -31,6 +39,7 @@ function App() {
         <img src="./images/logo.svg" alt="Logo" className="logo" />
         <h1>We are launching <span>soon!</span></h1>
         <p>Subscribe and get notified</p>
+        {/* ================== Form component. ================== */}
         <FormComponent>
           <div>
             <input type="text" placeholder="Your email address..." className={error ? "input-error" : null } value={email} onChange={handleChange} />
@@ -38,12 +47,16 @@ function App() {
           </div>
           <button onClick={applyNotify} >Notify Me</button>
         </FormComponent>
+
         <img src="./images/illustration-dashboard.png" alt="Illustration" className="illustration"/>
+
+        {/* ================== Social media buttons. ================== */}
         <SocialMedia>
           <button><FaFacebookF /></button>
           <button><FaTwitter /></button>
           <button><GrInstagram /></button>
         </SocialMedia>
+
         <p className="copyright">&copy; Copyright Ping. All rights reserved.</p>
       </MainComponent>
     </div>
@@ -54,6 +67,7 @@ export default App;
 
 
 
+// ================== Main component.
 const MainComponent = styled.div`
   width: min(85%, 600px);
   text-align: center;
@@ -104,6 +118,7 @@ const MainComponent = styled.div`
 `
 
 
+// ================== Forn component.
 const FormComponent = styled.div`
   margin-top: 2.5rem;
 
@@ -186,6 +201,7 @@ const FormComponent = styled.div`
 `
 
 
+// ================== Social media buttons.
 const SocialMedia = styled.div`
   margin-bottom: 2rem;
   display: flex;
